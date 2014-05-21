@@ -85,9 +85,9 @@
 									<span class="caret"></span>
 								</a>
 								<ul class="dropdown-menu">
-									<li><a>공지사항</a></li>
-									<li><a>포토갤러리</a></li>
-									<li><a>자유게시판</a></li>
+									<li onclick="document.location='공지사항.jsp';"><a>공지사항</a></li>
+									<li onclick="document.location='포토갤러리.jsp';"><a>포토갤러리</a></li>
+									<li  onclick="document.location='자유게시판.jsp';"><a>자유게시판</a></li>
 								</ul>
 								</div>
 							</li>
@@ -142,53 +142,116 @@
 	</div>
 </div>
 	
-<!-- ------하단메뉴----   -->
+<!----------------------------------- 하단메뉴 ------------------------------------------------->
 <div id="middle">
-	<!-- 옆에 왼쪽에 메뉴 -->
+	
+	<!------------------------------ 옆에 왼쪽에 메뉴 -------------------------------------------->
+	
 	<div id="left">
 		<h1>
 			커뮤니티
 		</h1>
 		<ul id="left_menu">
 			<table class="table table-hover">
-				<tr align = "right">
+				<tr align = "right" onclick="document.location='공지사항.jsp';" style="background:#D2D2D2">
 					<td>공지사항</td>
 				</tr>
-				<tr align = "right">
+				<tr align = "right" onclick="document.location='포토갤러리.jsp';">
 					<td>포토갤러리</td>
 				</tr>
-				<tr align = "right">
+				<tr align = "right" onclick="document.location='자유게시판.jsp';">
 					<td>자유게시판</td>
 				</tr>
 			</table>
 		</ul>
 	</div>
-	<!-- 경계 이미지 -->
+	
+	<!----------------------------------------- 경계 이미지 ------------------------------------------->
+	
 	<div id="bg_area">
 		<img alt=" " src="image/bg_area.gif">
 	</div>
-	<!-- 내용 -->
+	
+	<!------------------------------------------- 내용 --------------------------------------------->
+	
 	<div id="contents_wrap">
 		<h1>공지사항</h1>
 		<div id="contents">
 		<%
-			//db에 있는 자료들 가져옴
-			//자료갯수 세서 10으로 나눔
+			//db에 있는 자료들을 List에 저장
+			//아직 List의 length를 34라고 규정
+			int length = 34;
+			int mypage;
+			if (request.getParameter("mypage") == null)
+			{
+				mypage = 1;
+			}
+			else
+			{
+				mypage = Integer.parseInt(request.getParameter("mypage"));
+			}
+			String Test = "Test";
 		%>
 			<table class="table">
 				<tr>
-					<td>no</td>
+					<td>글번호</td>
 					<td>제목</td>
 					<td>글쓴이</td>
 					<td>날짜</td>
 					<td>조회수</td>
 				</tr>
+				<%
+				if (0 < (length - mypage*10))
+				{
+					for (int i = 0; i<10; i++)
+					{%>
+						<tr>
+							<td><%=Test %></td>
+							<td><%=Test %></td>
+							<td><%=Test %></td>
+							<td><%=Test %></td>
+							<td><%=Test %></td>
+						</tr>
+				<%	}
+				}
+				else
+				{
+					for (int i = 0; i<length%10; i++)
+					{%>
+						<tr>
+							<td><%=Test %></td>
+							<td><%=Test %></td>
+							<td><%=Test %></td>
+							<td><%=Test %></td>
+							<td><%=Test %></td>
+						</tr>
+				<%	}
+				}
+				%>
 				<tr>
-					<td colspan = 5 align="center">asdgagasd</td>
+					<td colspan = 5 align="center">
+						◀&nbsp;
+						<%
+						for (int i = 1; i<=length/10 + 1; i++)
+						{
+							if (i == mypage)
+							{%>
+								<u><b><%=i %></b></u>
+							<%}
+							else
+							{%>
+						
+							<a href="공지사항.jsp?mypage=<%=i%>"><%=i %></a>
+						<%	}
+						}
+						%>
+						&nbsp;▶
+					</td>
 				</tr>
 			</table>
 		</div>
 	</div>
 </div>
+
 </body>
 </html>
