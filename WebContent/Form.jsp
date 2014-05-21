@@ -169,6 +169,7 @@
 	</div>
 	<!-- 내용 -->
 	<div id="contents_wrap">
+<<<<<<< HEAD:WebContent/Form.jsp
 		<h1>공지사항</h1>
 		<div id="contents">
 		<%
@@ -188,6 +189,9 @@
 				</tr>
 			</table>
 		</div>
+=======
+		<h1>fasdfasdf</h1>
+>>>>>>> 75e200d74825b1bc6265196b1b949ad034a933b7:WebContent/Form.html
 	</div>
 </div>
 </body>
