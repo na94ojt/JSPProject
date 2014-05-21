@@ -1,10 +1,13 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
 <link href = "css/bootstrap.min.css" rel="stylesheet" media="screen">
 <link rel = "stylesheet" type="text/css" href = "css/common.css">
+<link rel = "stylesheet" type="text/css" href = "css/layout.css">
+<script src="js/common.js" type="text/javascript"></script>
 <title>Insert title here</title>
 
 
@@ -140,17 +143,52 @@
 </div>
 	
 <!-- ------하단메뉴----   -->
-<div id = "middle">
-	<div id = "left">			<!-- 메뉴 -->
-		<h2>
-				커뮤니티
-		</h2>
+<div id="middle">
+	<!-- 옆에 왼쪽에 메뉴 -->
+	<div id="left">
+		<h1>
+			커뮤니티
+		</h1>
+		<ul id="left_menu">
+			<table class="table table-hover">
+				<tr align = "right">
+					<td>공지사항</td>
+				</tr>
+				<tr align = "right">
+					<td>포토갤러리</td>
+				</tr>
+				<tr align = "right">
+					<td>자유게시판</td>
+				</tr>
+			</table>
+		</ul>
 	</div>
-	
-	<div>		<!-- 내용 -->
-		
+	<!-- 경계 이미지 -->
+	<div id="bg_area">
+		<img alt=" " src="image/bg_area.gif">
+	</div>
+	<!-- 내용 -->
+	<div id="contents_wrap">
+		<h1>공지사항</h1>
+		<div id="contents">
+		<%
+			//db에 있는 자료들 가져옴
+			//자료갯수 세서 10으로 나눔
+		%>
+			<table class="table">
+				<tr>
+					<td>no</td>
+					<td>제목</td>
+					<td>글쓴이</td>
+					<td>날짜</td>
+					<td>조회수</td>
+				</tr>
+				<tr>
+					<td colspan = 5>asdgagasd</td>
+				</tr>
+			</table>
+		</div>
 	</div>
 </div>
 </body>
-
 </html>

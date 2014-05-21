@@ -12,6 +12,7 @@ img, select, input{ vertical-align:middle; font-size:inherit; font-family:inheri
 input.img, input.radio, input.checkbox{padding:0px; margin:0px; height:auto; border:none; background:none; vertical-align:middle;}
 em, i, address{font-style:normal; font-weight:normal;}
 
+#bg_area{float:left; width:110px;}
 
 html { overflow:scroll; }
 /*link ����*/
