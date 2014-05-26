@@ -14,6 +14,7 @@
 
 <%@ include file="topArea.jsp"%>
 
+<!-- 상단 메뉴-->
 <!-- ------하단메뉴----   -->
 			
 	
@@ -55,7 +56,10 @@
 <!-- 메인 이미지 -->
 <div class="jumbotron">
         <div class="container">
+          <img src="image/img_logo.jpg" alt="나드으리 남양주!!">
+          
           <h1>나드으리 남양주!</h1>
+          
           <p>남양주시에 오신걸 환영합니다. 남양주를 소개하는 동시에 관광지역이나 문화재를 안내하는 사이트 입니다.</p>
 		</div>
 </div>
