@@ -11,26 +11,9 @@
 <title>Insert title here</title>
 </head>
 
-<style type="text/css">
-	.lr{ margin: 0 20px;}
-	
-	a.Button{
-	  display:block; 
-	  width:620px; /* 가로길이 px; */
-	  height:470px;  /* 세로길이 px; */
-	  background:url(image/img_map.jpg) no-repeat; /* 이미지 경로 */
-	}
-	
-	a:hover.Button{
-	 
-	   background:url(image/over.jpg) no-repeat; /* 이미지 경로 */
-	}
-	
-	a.Button span{
-	  display:none;
-	}
-	
-</style>
+
+
+
 
 <body>
 <script src="//code.jquery.com/jquery.js"></script>
@@ -66,6 +49,7 @@
 	//]]>
 </script>
 <!-- 상단 메뉴-->
+
   <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -124,7 +108,7 @@
         </div><!--/.navbar-collapse -->
      </div> 
 </div>
-<br><br><br><br>
+
 
 </body>
 </html>
