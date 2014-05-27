@@ -66,98 +66,65 @@
 	//]]>
 </script>
 <!-- 상단 메뉴-->
-<div id="topArea">
-	<div class="boxT">
-	
-			<ul class="topNvBox">
-				<li>
-					<a href = "login.jsp">
-						<button type="button" class="btn btn-default btn-xs"><font color=green><b>로그인</b></font></button>
-					</a>
-				</li>
-				<li class="li_line"></li>
-				<li>
-					<a href = "MemberRegForm.html">
-						<button type="button" class="btn btn-default btn-xs"><font color=gray><b>회원가입</b></font></button>
-					</a>
-				</li>
-			</ul>
-			
-			<ul class="logoGnv">
-			
-				<li class="logo">
-					<a href="index.html">
-						<img src="image/img_logo.jpg" alt="나드으리 남양주!!">
-					</a>
-				</li>
-				
-				<li class="Gnv">
-				
-					<div class="subnav">
-						<ul class="nav nav-pills" role="navigation"> 
-							<li class="dropdown">
-								<div class="lr">
-								<a class="btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown">
-									<b>커뮤니티</b>
-									<span class="caret"></span>
-								</a>
-								<ul class="dropdown-menu">
-									<li onclick="document.location='공지사항.jsp';"><a>공지사항</a></li>
-									<li onclick="document.location='포토갤러리.jsp';"><a>포토갤러리</a></li>
-									<li  onclick="document.location='자유게시판.jsp';"><a>자유게시판</a></li>
-								</ul>
-								</div>
-							</li>
-							
-							
-							<li class="dropdown">
-								<div class="lr">
-								<a class="btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown">
-									<b>문화</b>
-									<span class="caret"></span>
-								</a>
-								<ul class="dropdown-menu">
-									<li><a>박물관</a></li>
-									<li><a>미술관</a></li>
-								</ul>
-								</div>
-							</li>
-							
-							
-							<li class="dropdown">
-								<div class="lr">
-								<a class="btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown">
-									<b>관광</b>
-									<span class="caret"></span>
-								</a>
-								<ul class="dropdown-menu">
-									<li><a>나들이</a></li>
-									<li><a>다산길</a></li>
-									<li><a>맛집</a></li>
-								</ul>
-								</div>
-							</li>
-
-							<li class="dropdown">
-								<div class="lr">
-								<a class="btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown">
-									<b>축제</b>
-									<span class="caret"></span>
-								</a>
-								<ul class="dropdown-menu">
-									<li><a>다산문화재</a></li>
-									<li><a>광릉숲문화축제</a></li>
-									<li><a>슬로푸드국제대회</a></li>
-								</ul>
-								</div>
-							</li>
-							
-						</ul>
-					</div>
-				</li>
-			</ul>
-	</div>
+  <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">NamYangJu</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="index.jsp">Home</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">커뮤니티 <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li onclick="document.location='공지사항.jsp';"><a>공지사항</a></li>
+                <li onclick="document.location='포토갤러리.jsp';"><a>자유게시판</a></li>
+                <li onclick="document.location='자유게시판'.jsp';"><a>포토갤러리</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">문화 <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a>박물관</a></li>
+                <li><a>미술관</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">관광 <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a>나들이</a></li>
+                <li><a>다산길</a></li>
+                <li><a>맛집</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">축제 <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a>다산문화재</a></li>
+                <li><a>광릉숲문화축제</a></li>
+                <li><a>슬로우푸드국제대회</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="navbar-form navbar-right">
+            <div class="form-group">
+              <input type="text" placeholder="Id" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Password" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-success" onClick="SignInPro.jsp">Sign in</button>
+            <button type="submit" class="btn btn-success" onClick="SignUpPro.jsp">Sign up</button>
+          </form>
+        </div><!--/.navbar-collapse -->
+     </div> 
 </div>
+<br><br><br><br>
 
 </body>
 </html>
