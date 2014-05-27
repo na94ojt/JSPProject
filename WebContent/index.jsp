@@ -12,9 +12,12 @@
 
 <body>
 
+<!-- 상단 메뉴-->
+
+
 <%@ include file="topArea.jsp"%>
 
-<!-- 상단 메뉴-->
+
 <!-- ------하단메뉴----   -->
 			
 	
@@ -56,7 +59,7 @@
 <!-- 메인 이미지 -->
 <div class="jumbotron">
         <div class="container">
-          <img src="image/img_logo.jpg" alt="나드으리 남양주!!">
+          <!-- img src="image/img_logo.jpg" alt="나드으리 남양주!!"-->
           
           <h1>나드으리 남양주!</h1>
           
