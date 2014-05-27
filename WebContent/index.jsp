@@ -12,9 +12,8 @@
 
 <body>
 
-<%@ include file="topArea.jsp"%>
-
 <!-- 상단 메뉴-->
+<%@ include file="topArea.jsp"%>
 <!-- ------하단메뉴----   -->
 			
 	
