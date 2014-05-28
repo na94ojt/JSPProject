@@ -13,7 +13,7 @@
 		</h1>
 		<ul id="left_menu">
 			<table class="table table-hover">
-				<tr align = "right" onclick="document.location='공지사항.jsp';" style="background:#D2D2D2">
+				<tr align = "right" onclick="document.location='공지사항.jsp';">
 					<td>공지사항</td>
 				</tr>
 				<tr align = "right" onclick="document.location='포토갤러리.jsp';">
@@ -31,6 +31,6 @@
 	<div id="bg_area">
 		<img alt=" " src="image/bg_area.gif">
 	</div>
-	
+	<!-- ---------------------------------------------------------------------------- -->
 </body>
 </html>

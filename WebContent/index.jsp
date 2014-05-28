@@ -4,21 +4,13 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
-<link href = "css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href = "css/bootstrap.min.css" rel="stylesheet">
 <link rel = "stylesheet" type="text/css" href = "css/common.css">
 <title>Insert title here</title>
 
+
+
 </head>
-
-<body>
-
-<%@ include file="topArea.jsp"%>
-
-<!-- 상단 메뉴-->
-<!-- ------하단메뉴----   -->
-			
-	
-<div>
 <!--  메인 이미지 좌표 -->
 	<script language="javascript" type="text/javascript">
 		function changeMap(mapNumber) {
@@ -47,32 +39,45 @@
 			img.setAttribute("src", src);
 		}
 	</script>
-	<map name="mapA">
-		<area data-toggle="modal" data-target="#myModal" shape="poly" coords="329,247,267,298,274,320,262,337,337,417,346,378,329,353,374,300" onmouseover="changeMap(2);" onmouseout="changeMap(0);">
-		<area shape="poly" coords="471,165,415,207,405,158,358,149,336,244,362,256,378,299,443,292,475,242" onmouseover="changeMap(3);" onmouseout="changeMap(0);">
-		<area shape="poly" coords="442,293,377,300,333,352,331,370,347,380,351,399,337,420,382,457" onmouseover="changeMap(4);" onmouseout="changeMap(0);">
-	</map>
-	
-<!-- 메인 이미지 -->
+<body>
+
+<!-- 상단 메뉴-->
+
+<%@ include file="topArea.jsp"%>
+
+<!-- ------하단메뉴----   -->	
+
 <div class="jumbotron">
         <div class="container">
-          <img src="image/img_logo.jpg" alt="나드으리 남양주!!">
-          
+          <!-- img src="image/img_logo.jpg" alt="나드으리 남양주!!"-->
+          <br><br><br>
           <h1>나드으리 남양주!</h1>
           
           <p>남양주시에 오신걸 환영합니다. 남양주를 소개하는 동시에 관광지역이나 문화재를 안내하는 사이트 입니다.</p>
+          <p>남양주시에 오신걸 환영합니다. 남양주를 소개하는 동시에 관광지역이나 문화재를 안내하는 사이트 입니다.</p>
+          <p>남양주시에 오신걸 환영합니다. 남양주를 소개하는 동시에 관광지역이나 문화재를 안내하는 사이트 입니다.</p>
 		</div>
 </div>
+
+<!-- 메인 이미지 -->
 <div class="container">
 <div align = 'center'>
 		<a><img id="mapImage" src="image/img_map.jpg" class="-responsive" alt="Responsive image" usemap="#mapA"></a>
 </div>
 </div>
 
+<!-- 좌표 -->
+<map name="mapA">
+		<area data-toggle="modal" data-target="#myModal" shape="poly" coords="329,247,267,298,274,320,262,337,337,417,346,378,329,353,374,300" onmouseover="changeMap(2);" onmouseout="changeMap(0);">
+		<area shape="poly" coords="471,165,415,207,405,158,358,149,336,244,362,256,378,299,443,292,475,242" onmouseover="changeMap(3);" onmouseout="changeMap(0);">
+		<area shape="poly" coords="442,293,377,300,333,352,331,370,347,380,351,399,337,420,382,457" onmouseover="changeMap(4);" onmouseout="changeMap(0);">
+</map>
+
 	
 	
 <!-- Button trigger modal -->
 <!-- Modal -->
+<div>
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -139,7 +144,7 @@
     	<div class="container">
 	    	<div class="bs-social">
  		 <ul class="bs-social-buttons"></ul>
-		<img src="image/real_logo.jpg" align=left alt="나드으리 남양주!!">
+		<img src="image/img_logo.jpg" align=left alt="나드으리 남양주!!">
 		<br>
 		<br>
     	 	<b>㈜남양주를사랑하는사람들</b>  사업자전화번호: 010-4188-0956 &nbsp  E-mail: lehdqlsl@naver.com<br>
@@ -151,11 +156,5 @@
 
 
 	
-	
-
-	
-	
-</div>
 </body>
-
 </html>
