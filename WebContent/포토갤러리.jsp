@@ -9,6 +9,16 @@
 <title>Insert title here</title>
 </head>
 
+<style type="text/css">
+	.photo 
+	{
+        width: 10%;
+		height: 10%;
+		background-size:contain; 
+		background-repeat:no-repeat;
+	} 
+</style>
+
 <body>
 
 <%@ include file="topArea.jsp"%>
@@ -38,60 +48,65 @@
 			}
 			String Test = "Test";
 		%>
-			<table class="table">
-				<tr>
-					<td>글번호</td>
-					<td>제목</td>
-					<td>글쓴이</td>
-					<td>날짜</td>
-					<td>조회수</td>
-				</tr>
-				<%
-				if (0 < (length - mypage*10))
-				{
-					for (int i = 0; i<10; i++)
-					{%>
-						<tr>
-							<td><%=Test %></td>
-							<td><%=Test %></td>
-							<td><%=Test %></td>
-							<td><%=Test %></td>
-							<td><%=Test %></td>
-						</tr>
-				<%	}
-				}
-				else
-				{
-					for (int i = 0; i<length%10; i++)
-					{%>
-						<tr>
-							<td><%=Test %></td>
-							<td><%=Test %></td>
-							<td><%=Test %></td>
-							<td><%=Test %></td>
-							<td><%=Test %></td>
-						</tr>
-				<%	}
-				}
-				%>
-				<tr>
-					<td colspan = 5 align="center">
-						◀&nbsp;
-						<%
-						for (int i = 1; i<=length/10 + 1; i++)
+			<table class="table table-bordered">
+				<%for (int i = 0; i<4; i++)
+				{%>
+					<tr width="100" height="150" align="center">
+						<%for (int j = 0; j<4; j++)
 						{
-							if (i == mypage)
+							if (0 == j%2)
 							{%>
-								<u><b><%=i %></b></u>
+								<td class="photo" background="image/img_logo.jpg"></td>
 							<%}
 							else
 							{%>
+								<td class="photo" background="image/img_map.jpg"></td>
+							<%}%>
+						<%}%>
+					</tr>
+				<%}%>
+			</table>
+			<br>
+			<table class="table">
+				
+				<tr border = 0>
+					<td></td>
+					<td colspan = 3 align="center">
+						<ul class="pagination">
+							<%if (0 == mypage-1)
+							{%>
+								<li><a href="#">◀</a></li>
+							<%}
+							else 
+							{%>
+								<li><a href="포토갤러리.jsp?mypage=<%=mypage-1%>">◀</a></li>
+							<%}
 						
-							<a href="포토갤러리.jsp?mypage=<%=i%>"><%=i %></a>
-						<%	}
-						}
-						%>
-						&nbsp;▶
+							for (int i = 1; i<=length/10 + 1; i++)
+							{%>
+								<%if (i == mypage)
+								{%>
+									<li class="active"><a href="#"><%=i %></a></li>	
+								<%}
+								else
+								{%>
+									<li><a href="포토갤러리.jsp?mypage=<%=i%>"><%=i %></a></li>
+								<%} %>
+							<%}
+							%>
+							<%if (length/10+1 == mypage)
+							{%>
+								<li><a href="#">▶</a></li>
+							<%}
+							else 
+							{%>
+								<li><a href="포토갤러리.jsp?mypage=<%=mypage+1%>">▶</a></li>
+							<%}%>
+						</ul>
+					</td>
+					<td align = "center">
+						<br>
+						<button type="button" class="btn btn-primary btn-sm">글쓰기</button>
 					</td>
 				</tr>
 			</table>

@@ -47,51 +47,57 @@
 					<td>조회수</td>
 				</tr>
 				<%
-				if (0 < (length - mypage*10))
-				{
-					for (int i = 0; i<10; i++)
-					{%>
-						<tr>
-							<td><%=Test %></td>
-							<td><%=Test %></td>
-							<td><%=Test %></td>
-							<td><%=Test %></td>
-							<td><%=Test %></td>
-						</tr>
-				<%	}
-				}
-				else
-				{
-					for (int i = 0; i<length%10; i++)
-					{%>
-						<tr>
-							<td><%=Test %></td>
-							<td><%=Test %></td>
-							<td><%=Test %></td>
-							<td><%=Test %></td>
-							<td><%=Test %></td>
-						</tr>
-				<%	}
-				}
+				int startIndex = length - (mypage-1)*10;
+				
+				for (int i = startIndex; i > (startIndex - 10) && i > 0; i--)
+				{%>
+					<tr>
+						<td><%=i %></td>
+						<td><%=startIndex - 10 %></td>
+						<td><%=Test%></td>
+						<td><%=Test %></td>
+						<td><%=Test %></td>
+					</tr>
+				<%}
 				%>
 				<tr>
-					<td colspan = 5 align="center">
-						◀&nbsp;
-						<%
-						for (int i = 1; i<=length/10 + 1; i++)
-						{
-							if (i == mypage)
+					<td></td>
+					<td colspan = 3 align="center">
+						<ul class="pagination">
+							<%if (0 == mypage-1)
 							{%>
-								<u><b><%=i %></b></u>
+								<li><a href="#">◀</a></li>
 							<%}
-							else
+							else 
 							{%>
+								<li><a href="자유게시판.jsp?mypage=<%=mypage-1%>">◀</a></li>
+							<%}
 						
-							<a href="자유게시판.jsp?mypage=<%=i%>"><%=i %></a>
-						<%	}
-						}
-						%>
-						&nbsp;▶
+							for (int i = 1; i<=length/10 + 1; i++)
+							{%>
+								<%if (i == mypage)
+								{%>
+									<li class="active"><a href="#"><%=i %></a></li>	
+								<%}
+								else
+								{%>
+									<li><a href="자유게시판.jsp?mypage=<%=i%>"><%=i %></a></li>
+								<%} %>
+							<%}
+							%>
+							<%if (length/10+1 == mypage)
+							{%>
+								<li><a href="#">▶</a></li>
+							<%}
+							else 
+							{%>
+								<li><a href="자유게시판.jsp?mypage=<%=mypage+1%>">▶</a></li>
+							<%}%>
+						</ul>
+					</td>
+					<td align = "center">
+						<br>
+						<button type="button" class="btn btn-primary btn-sm">글쓰기</button>
 					</td>
 				</tr>
 			</table>

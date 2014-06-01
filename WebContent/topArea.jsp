@@ -67,8 +67,8 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">커뮤니티 <b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li onclick="document.location='공지사항.jsp';"><a>공지사항</a></li>
-                <li onclick="document.location='포토갤러리.jsp';"><a>자유게시판</a></li>
-                <li onclick="document.location='자유게시판'.jsp';"><a>포토갤러리</a></li>
+                <li onclick="document.location='자유게시판.jsp';"><a>자유게시판</a></li>
+                <li onclick="document.location='포토갤러리.jsp';"><a>포토갤러리</a></li>
               </ul>
             </li>
             <li class="dropdown">
