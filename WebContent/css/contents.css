@@ -20,4 +20,10 @@ display:none; } /* filter:alpha(opacity=90); opacity:0.9; -moz-opacity:0.1; */
 #allNvBox2{display:none;}
 
 
-
+.tour{overflow:hidden; width:648px; margin-bottom:20px;}
+.tour p{float:left;padding:17px 0 0 15px;}
+.tour_text{float:left; width:358px; margin:0 0 0 35px;}
+.tour_text dl{width:380px;}
+.tour_text dl dt{padding:16px 0 9px 0; line-height:1.5em;}
+.tour_text dl dd{line-height:1.5em;}
+.tour_text h5{margin-left:0;}

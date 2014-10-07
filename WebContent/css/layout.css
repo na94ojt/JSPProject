@@ -67,8 +67,8 @@ body .no{padding-left:0px;}/*130624 테스트*/
 
 
 /*middle_[�����而⑦�痢���*/
-#middle{width:990px;clear:both;height:100%;margin:0 auto;margin-top:100px;}
-#middle #left{width:173px;margin-left:18px;margin-top:21px;float:left;display:inline;}
+#middle{width:990px;clear:both;height:100%;margin:0 auto;margin-top:100px;backgruond:url(/image/bg_01.gif)}
+#middle #left{width:173px;margin-left:18px;margin-top:21px;float:left;display:inline;  background:#fff url(/image/bg_left_top.gif) no-repeat left top;}
 #middle #left #left_menu li{padding-bottom:2px;line-height:1em;}
 #middle #left #left_menu ul {padding-top:4px;}
 #middle #left #left_menu ul li{margin-left:18px;padding:0 0 4px 0;line-height:1.2em;}
@@ -150,7 +150,7 @@ h3{float:left;}
 #quick p{margin-top:3px;}
 
 /*footer_[�명�]*/
-#footer{margin-top:20px;padding-top:17px;clear:both;border-top:1px solid #d9d9d9;height:111px;line-height:1em;font-size:0.8em;}
+#footer{margin-top:20px;padding-top:17px;clear:both;border-top:1px solid #d9d9d9;height:111px;line-height:1em;font-size:1em;}
 /* 인증마크 추가소스 start */
 #footer p.footci{padding-left:15px; padding-top:5px; float:left;display:inline;}
 #footer p.web{padding-left:15px;float:left;display:inline;}
